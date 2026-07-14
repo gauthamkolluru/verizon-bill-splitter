@@ -1,0 +1,29 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+.venv/
+venv/
+.env
+.DS_Store
+.pytest_cache/
+.mypy_cache/
+
+# Bill PDFs and exports (may contain account info)
+input/*.pdf
+output/*
+!input/.gitkeep
+!output/.gitkeep
+
+# Local user mapping
+config/line_users.yaml
+
+# Google Drive OAuth (local secrets)
+config/google_drive.yaml
+config/google_credentials.json
+config/google_token.json
+
+# Compact chat cache
+.cursor/compact/

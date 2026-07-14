@@ -1,0 +1,10 @@
+# Copy to config/line_users.yaml and map each line to a person.
+# Phone numbers can be written with or without dashes/parentheses.
+#
+# Example:
+#   "555-123-4567": Alice
+#   "5559876543": Bob
+
+lines:
+  "555-123-4567": Alice
+  "555-987-6543": Bob
