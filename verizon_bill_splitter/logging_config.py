@@ -15,3 +15,4 @@ def configure_logging(level: int = logging.INFO) -> None:
     root.addHandler(handler)
     root.setLevel(level)
     root.propagate = False
+    logging.getLogger("pdfminer").setLevel(logging.ERROR)

@@ -7,20 +7,31 @@ from pathlib import Path
 
 import pandas as pd
 
-from verizon_bill_splitter.drive import load_drive_config, upload_csv_to_drive
+from verizon_bill_splitter.drive import (
+    download_charges_csv_text,
+    load_drive_config,
+    upload_csv_to_drive,
+)
 from verizon_bill_splitter.logging_config import configure_logging
 from verizon_bill_splitter.manifest import classify_pdfs, is_parsed, list_unparsed_pdfs, mark_parsed
 from verizon_bill_splitter.parser import (
     aggregated_csv_path,
     load_user_map,
+    merge_charge_csv_texts,
     merge_into_aggregated_csv,
     parse_bill_pdf,
     write_aggregated_csv,
 )
+from verizon_bill_splitter.verizon_fetch import (
+    VERIZON_BILLS_URL,
+    VerizonFetchError,
+    default_storage_state_path,
+    fetch_missing_bills,
+    latest_bill_month,
+    login_and_save_session,
+)
 
 logger = logging.getLogger("verizon_bill_splitter.cli")
-
-VERIZON_BILLS_URL = "https://www.verizon.com/digital/nsa/secure/ui/bill/docs/#/"
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -61,6 +72,22 @@ def build_parser() -> argparse.ArgumentParser:
         help="Re-parse PDFs even if already processed; with no PDF args, re-parses all PDFs in --input-dir",
     )
     parser.add_argument(
+        "--fetch",
+        action="store_true",
+        help="Download the latest bill PDF via Playwright into --input-dir, then parse",
+    )
+    parser.add_argument(
+        "--login",
+        action="store_true",
+        help="Open a headed browser to sign in to Verizon and save the session, then exit",
+    )
+    parser.add_argument(
+        "--storage-state",
+        type=Path,
+        default=None,
+        help="Playwright storage state path (default: config/verizon_storage_state.json)",
+    )
+    parser.add_argument(
         "--drive-config",
         type=Path,
         default=Path("config/google_drive.yaml"),
@@ -74,7 +101,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--upload-drive",
         action="store_true",
-        help="Upload output/charges.csv to Google Drive (parse first if needed)",
+        help="Accepted for compatibility; Drive upload already runs unless --no-drive",
     )
     parser.add_argument(
         "--status",
@@ -142,14 +169,9 @@ def _maybe_upload_to_drive(args: argparse.Namespace) -> int:
         return 0
 
     drive_config = load_drive_config(args.drive_config)
-    if drive_config is None and not args.upload_drive:
-        return 0
     if drive_config is None:
-        logger.error(
-            "Drive upload requested but %s is missing or disabled",
-            args.drive_config,
-        )
-        return 1
+        logger.info("Drive upload skipped because it is disabled in %s", args.drive_config)
+        return 0
 
     csv_path = aggregated_csv_path(args.output_dir)
     if not csv_path.exists():
@@ -157,6 +179,9 @@ def _maybe_upload_to_drive(args: argparse.Namespace) -> int:
         return 1
 
     try:
+        remote_text = download_charges_csv_text(drive_config, args.drive_config)
+        merged = merge_charge_csv_texts(csv_path.read_text(), remote_text)
+        csv_path.write_text(merged)
         file_id = upload_csv_to_drive(csv_path, drive_config, config_path=args.drive_config)
     except FileNotFoundError as exc:
         logger.error("Drive upload setup incomplete: %s", exc)
@@ -169,11 +194,76 @@ def _maybe_upload_to_drive(args: argparse.Namespace) -> int:
     return 0
 
 
+def _storage_state_path(args: argparse.Namespace) -> Path:
+    return args.storage_state or default_storage_state_path()
+
+
+def _run_login(args: argparse.Namespace) -> int:
+    try:
+        path = login_and_save_session(_storage_state_path(args))
+    except VerizonFetchError as exc:
+        logger.error("%s", exc)
+        return 1
+    print(f"Saved Verizon session: {path}")
+    return 0
+
+
+def _csv_cutoff(args: argparse.Namespace):
+    text = None
+    drive_config = load_drive_config(args.drive_config)
+    if drive_config is not None:
+        try:
+            text = download_charges_csv_text(drive_config, args.drive_config)
+        except Exception as exc:
+            logger.warning("Could not read Drive charges.csv: %s", exc)
+    if not text:
+        local_csv = aggregated_csv_path(args.output_dir)
+        if local_csv.is_file():
+            try:
+                text = local_csv.read_text()
+            except OSError as exc:
+                logger.warning("Could not read %s: %s", local_csv, exc)
+    if not text:
+        logger.info("No charges.csv cutoff; downloading every View PDF on the page")
+        return None
+    latest = latest_bill_month(text)
+    if latest is None:
+        logger.info("charges.csv has no bill date; downloading every View PDF on the page")
+        return None
+    logger.info("CSV cutoff bill month: %04d-%02d", latest.year, latest.month)
+    return latest
+
+
+def _run_fetch(args: argparse.Namespace) -> int:
+    try:
+        saved = fetch_missing_bills(
+            args.input_dir,
+            _storage_state_path(args),
+            force_login=False,
+            latest_month=_csv_cutoff(args),
+        )
+    except VerizonFetchError as exc:
+        logger.error("%s", exc)
+        return 1
+    if not saved:
+        print("No bills newer than the CSV cutoff.")
+        return 0
+    for dest in saved:
+        print(f"Fetched bill: {dest}")
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     configure_logging()
     args = build_parser().parse_args(argv)
     if args.status:
         return _print_bill_status(args.input_dir, args.output_dir)
+    if args.login:
+        return _run_login(args)
+    if args.fetch:
+        fetch_code = _run_fetch(args)
+        if fetch_code != 0:
+            return fetch_code
     pdfs = _resolve_pdfs(args)
 
     if not pdfs:

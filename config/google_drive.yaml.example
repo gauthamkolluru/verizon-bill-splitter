@@ -1,16 +1,16 @@
-# Copy to config/google_drive.yaml and set enabled: true after OAuth setup.
+# Copy to config/google_drive.yaml. Upload runs after each parse unless --no-drive.
 #
 # One-time setup:
 # 1. Create a Google Cloud project and enable the Google Drive API.
 # 2. Create an OAuth client ID (Desktop app) and download the JSON.
 # 3. Save it as config/google_credentials.json (gitignored).
-# 4. Run: python parse_bill.py --upload-drive
+# 4. Run: python parse_bill.py
 #    A browser window opens for consent; token is saved to config/google_token.json.
 #
 # folder_path: folder name under My Drive (created if it does not exist).
 # folder_id / folder_id_path: auto-populated after the first successful upload.
 
-enabled: false
+enabled: true
 credentials_file: config/google_credentials.json
 token_file: config/google_token.json
 folder_path: Verizon Bills

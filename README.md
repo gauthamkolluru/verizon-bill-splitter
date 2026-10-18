@@ -9,6 +9,7 @@ cd ~/Projects/verizon-bill-splitter
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
+playwright install chromium
 ```
 
 ## Configure users (optional)
@@ -28,6 +29,28 @@ lines:
 ```
 
 ## Monthly workflow
+
+### Option A — Playwright download (recommended)
+
+1. One-time (or when the session expires): sign in with a headed browser:
+
+```bash
+python parse_bill.py --login
+```
+
+Complete Verizon sign-in / MFA in the browser, then press Enter in the terminal. The session is saved to `config/verizon_storage_state.json` (gitignored).
+
+2. Each month:
+
+```bash
+python parse_bill.py --fetch
+```
+
+This opens Documents & Receipts, selects Monthly Bills when that category is shown, and clicks the latest bill title. The PDF is saved into `input/`, then any unparsed PDFs are parsed into `output/charges.csv` as usual. If the saved session expired, a headed browser opens again for manual login.
+
+If Verizon changes their bills UI, update the download selectors in `verizon_bill_splitter/verizon_fetch.py` (`DOWNLOAD_SELECTORS`).
+
+### Option B — Manual download
 
 1. **[Open Verizon bills](https://www.verizon.com/digital/nsa/secure/ui/bill/docs/#/)** — sign in and download your bill PDF.
 2. Save the PDF to **`input/`** (e.g. `input/MyBill_03.15.2026.pdf`).
@@ -53,18 +76,17 @@ python parse_bill.py --force input/MyBill_03.15.2026.pdf
 python parse_bill.py --force
 ```
 
-### Google Drive (optional)
+### Google Drive
 
-Upload `output/charges.csv` to Google Drive after each run:
+Each parse updates `charges.csv` in Google Drive unless you pass `--no-drive`. The upload revises that one file: rows that exist only on Drive are kept, and a `paid` value already on Drive is kept when the local cell is blank.
 
 ```bash
 cp config/google_drive.yaml.example config/google_drive.yaml
 # Add OAuth client JSON as config/google_credentials.json (see CODEBASE_INDEX.md)
-# Set enabled: true in config/google_drive.yaml
-python parse_bill.py --upload-drive
+python parse_bill.py
 ```
 
-Default folder: `Verizon Bills` (created under My Drive if needed). Use `--no-drive` to skip upload for one run.
+Default folder: `Verizon Bills` (created under My Drive if needed). The first run opens a browser for consent.
 
 ## Output
 
@@ -89,4 +111,5 @@ See `CODEBASE_INDEX.md` for module map and commands.
 ## Notes
 
 - Bill PDFs stay in `input/` and are gitignored (they contain account info).
-- No Verizon login automation — download the PDF manually each month, then run the script.
+- `config/verizon_storage_state.json` is credential-equivalent — keep it local and gitignored.
+- Playwright download is optional; you can still drop PDFs into `input/` manually.

@@ -1,0 +1,2962 @@
+{
+  "summaries": [
+    {
+      "id": "file:parse_bill.py",
+      "kind": "file",
+      "text": "Process entry point that calls the CLI.",
+      "source_nodes": [
+        "file:parse_bill.py"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": true
+      }
+    },
+    {
+      "id": "file:tests/test_drive.py",
+      "kind": "file",
+      "text": "file test_drive.py in tests/test_drive.py.",
+      "source_nodes": [
+        "file:tests/test_drive.py"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "test:tests/test_drive.py:test_escape_query_value",
+      "kind": "symbol",
+      "text": "test test_escape_query_value in tests/test_drive.py.",
+      "source_nodes": [
+        "test:tests/test_drive.py:test_escape_query_value"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "test:tests/test_drive.py:test_folder_parts",
+      "kind": "symbol",
+      "text": "test test_folder_parts in tests/test_drive.py.",
+      "source_nodes": [
+        "test:tests/test_drive.py:test_folder_parts"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "test:tests/test_drive.py:test_load_drive_config_disabled",
+      "kind": "symbol",
+      "text": "test test_load_drive_config_disabled in tests/test_drive.py.",
+      "source_nodes": [
+        "test:tests/test_drive.py:test_load_drive_config_disabled"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "test:tests/test_drive.py:test_load_drive_config_enabled",
+      "kind": "symbol",
+      "text": "test test_load_drive_config_enabled in tests/test_drive.py.",
+      "source_nodes": [
+        "test:tests/test_drive.py:test_load_drive_config_enabled"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "test:tests/test_drive.py:test_cached_folder_id_ignores_stale_path",
+      "kind": "symbol",
+      "text": "test test_cached_folder_id_ignores_stale_path in tests/test_drive.py.",
+      "source_nodes": [
+        "test:tests/test_drive.py:test_cached_folder_id_ignores_stale_path"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "test:tests/test_drive.py:test_save_drive_config_round_trip",
+      "kind": "symbol",
+      "text": "test test_save_drive_config_round_trip in tests/test_drive.py.",
+      "source_nodes": [
+        "test:tests/test_drive.py:test_save_drive_config_round_trip"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "test:tests/test_drive.py:test_ensure_folder_path_uses_cache",
+      "kind": "symbol",
+      "text": "test test_ensure_folder_path_uses_cache in tests/test_drive.py.",
+      "source_nodes": [
+        "test:tests/test_drive.py:test_ensure_folder_path_uses_cache"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "test:tests/test_drive.py:test_ensure_folder_path_creates_missing_folders",
+      "kind": "symbol",
+      "text": "test test_ensure_folder_path_creates_missing_folders in tests/test_drive.py.",
+      "source_nodes": [
+        "test:tests/test_drive.py:test_ensure_folder_path_creates_missing_folders"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "test:tests/test_drive.py:test_upload_csv_updates_existing_file",
+      "kind": "symbol",
+      "text": "test test_upload_csv_updates_existing_file in tests/test_drive.py.",
+      "source_nodes": [
+        "test:tests/test_drive.py:test_upload_csv_updates_existing_file"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "test:tests/test_drive.py:test_upload_csv_to_drive_persists_folder_id",
+      "kind": "symbol",
+      "text": "test test_upload_csv_to_drive_persists_folder_id in tests/test_drive.py.",
+      "source_nodes": [
+        "test:tests/test_drive.py:test_upload_csv_to_drive_persists_folder_id"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "file:tests/test_manifest.py",
+      "kind": "file",
+      "text": "file test_manifest.py in tests/test_manifest.py.",
+      "source_nodes": [
+        "file:tests/test_manifest.py"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "test:tests/test_manifest.py:test_mark_and_detect_parsed",
+      "kind": "symbol",
+      "text": "test test_mark_and_detect_parsed in tests/test_manifest.py.",
+      "source_nodes": [
+        "test:tests/test_manifest.py:test_mark_and_detect_parsed"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "test:tests/test_manifest.py:test_changed_pdf_is_unparsed",
+      "kind": "symbol",
+      "text": "test test_changed_pdf_is_unparsed in tests/test_manifest.py.",
+      "source_nodes": [
+        "test:tests/test_manifest.py:test_changed_pdf_is_unparsed"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "test:tests/test_manifest.py:test_list_unparsed_pdfs",
+      "kind": "symbol",
+      "text": "test test_list_unparsed_pdfs in tests/test_manifest.py.",
+      "source_nodes": [
+        "test:tests/test_manifest.py:test_list_unparsed_pdfs"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "test:tests/test_manifest.py:test_classify_pdfs",
+      "kind": "symbol",
+      "text": "test test_classify_pdfs in tests/test_manifest.py.",
+      "source_nodes": [
+        "test:tests/test_manifest.py:test_classify_pdfs"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "test:tests/test_manifest.py:test_migrates_absolute_path_manifest_keys",
+      "kind": "symbol",
+      "text": "test test_migrates_absolute_path_manifest_keys in tests/test_manifest.py.",
+      "source_nodes": [
+        "test:tests/test_manifest.py:test_migrates_absolute_path_manifest_keys"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "file:tests/test_parser.py",
+      "kind": "file",
+      "text": "file test_parser.py in tests/test_parser.py.",
+      "source_nodes": [
+        "file:tests/test_parser.py"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "test:tests/test_parser.py:test_normalize_phone",
+      "kind": "symbol",
+      "text": "test test_normalize_phone in tests/test_parser.py.",
+      "source_nodes": [
+        "test:tests/test_parser.py:test_normalize_phone"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "test:tests/test_parser.py:test_parse_amount",
+      "kind": "symbol",
+      "text": "test test_parse_amount in tests/test_parser.py.",
+      "source_nodes": [
+        "test:tests/test_parser.py:test_parse_amount"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "test:tests/test_parser.py:test_extract_name",
+      "kind": "symbol",
+      "text": "test test_extract_name in tests/test_parser.py.",
+      "source_nodes": [
+        "test:tests/test_parser.py:test_extract_name"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "test:tests/test_parser.py:test_split_line_parts",
+      "kind": "symbol",
+      "text": "test test_split_line_parts in tests/test_parser.py.",
+      "source_nodes": [
+        "test:tests/test_parser.py:test_split_line_parts"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "test:tests/test_parser.py:test_should_skip_total_row",
+      "kind": "symbol",
+      "text": "test test_should_skip_total_row in tests/test_parser.py.",
+      "source_nodes": [
+        "test:tests/test_parser.py:test_should_skip_total_row"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "test:tests/test_parser.py:test_is_account_wide",
+      "kind": "symbol",
+      "text": "test test_is_account_wide in tests/test_parser.py.",
+      "source_nodes": [
+        "test:tests/test_parser.py:test_is_account_wide"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "test:tests/test_parser.py:test_extract_metadata_from_text",
+      "kind": "symbol",
+      "text": "test test_extract_metadata_from_text in tests/test_parser.py.",
+      "source_nodes": [
+        "test:tests/test_parser.py:test_extract_metadata_from_text"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "test:tests/test_parser.py:test_parse_summary_rows_simple",
+      "kind": "symbol",
+      "text": "test test_parse_summary_rows_simple in tests/test_parser.py.",
+      "source_nodes": [
+        "test:tests/test_parser.py:test_parse_summary_rows_simple"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "test:tests/test_parser.py:test_parse_summary_rows_account_wide",
+      "kind": "symbol",
+      "text": "test test_parse_summary_rows_account_wide in tests/test_parser.py.",
+      "source_nodes": [
+        "test:tests/test_parser.py:test_parse_summary_rows_account_wide"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:tests/test_parser.py:_sample_frame",
+      "kind": "symbol",
+      "text": "function _sample_frame in tests/test_parser.py.",
+      "source_nodes": [
+        "function:tests/test_parser.py:_sample_frame"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "test:tests/test_parser.py:test_write_aggregated_csv",
+      "kind": "symbol",
+      "text": "test test_write_aggregated_csv in tests/test_parser.py.",
+      "source_nodes": [
+        "test:tests/test_parser.py:test_write_aggregated_csv"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "test:tests/test_parser.py:test_prepare_export_dataframe_drops_redundant_columns",
+      "kind": "symbol",
+      "text": "test test_prepare_export_dataframe_drops_redundant_columns in tests/test_parser.py.",
+      "source_nodes": [
+        "test:tests/test_parser.py:test_prepare_export_dataframe_drops_redundant_columns"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "test:tests/test_parser.py:test_apply_paid_preserves_values_on_rebuild",
+      "kind": "symbol",
+      "text": "test test_apply_paid_preserves_values_on_rebuild in tests/test_parser.py.",
+      "source_nodes": [
+        "test:tests/test_parser.py:test_apply_paid_preserves_values_on_rebuild"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "test:tests/test_parser.py:test_merge_into_aggregated_csv_replaces_source",
+      "kind": "symbol",
+      "text": "test test_merge_into_aggregated_csv_replaces_source in tests/test_parser.py.",
+      "source_nodes": [
+        "test:tests/test_parser.py:test_merge_into_aggregated_csv_replaces_source"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "file:tests/test_verizon_fetch.py",
+      "kind": "file",
+      "text": "Unit tests for fetch helpers, including category, bill title, and PDF checks.",
+      "source_nodes": [
+        "file:tests/test_verizon_fetch.py"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": true
+      }
+    },
+    {
+      "id": "test:tests/test_verizon_fetch.py:test_looks_like_login_url",
+      "kind": "symbol",
+      "text": "test test_looks_like_login_url in tests/test_verizon_fetch.py.",
+      "source_nodes": [
+        "test:tests/test_verizon_fetch.py:test_looks_like_login_url"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "test:tests/test_verizon_fetch.py:test_bill_pdf_filename_from_date",
+      "kind": "symbol",
+      "text": "test test_bill_pdf_filename_from_date in tests/test_verizon_fetch.py.",
+      "source_nodes": [
+        "test:tests/test_verizon_fetch.py:test_bill_pdf_filename_from_date"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "test:tests/test_verizon_fetch.py:test_bill_pdf_filename_from_string",
+      "kind": "symbol",
+      "text": "test test_bill_pdf_filename_from_string in tests/test_verizon_fetch.py.",
+      "source_nodes": [
+        "test:tests/test_verizon_fetch.py:test_bill_pdf_filename_from_string"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "test:tests/test_verizon_fetch.py:test_parse_bill_date_string",
+      "kind": "symbol",
+      "text": "test test_parse_bill_date_string in tests/test_verizon_fetch.py.",
+      "source_nodes": [
+        "test:tests/test_verizon_fetch.py:test_parse_bill_date_string"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "test:tests/test_verizon_fetch.py:test_resolve_download_dest_prefers_bill_date",
+      "kind": "symbol",
+      "text": "test test_resolve_download_dest_prefers_bill_date in tests/test_verizon_fetch.py.",
+      "source_nodes": [
+        "test:tests/test_verizon_fetch.py:test_resolve_download_dest_prefers_bill_date"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "test:tests/test_verizon_fetch.py:test_resolve_download_dest_from_suggested_filename",
+      "kind": "symbol",
+      "text": "test test_resolve_download_dest_from_suggested_filename in tests/test_verizon_fetch.py.",
+      "source_nodes": [
+        "test:tests/test_verizon_fetch.py:test_resolve_download_dest_from_suggested_filename"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "test:tests/test_verizon_fetch.py:test_resolve_download_dest_keeps_plain_pdf_name",
+      "kind": "symbol",
+      "text": "test test_resolve_download_dest_keeps_plain_pdf_name in tests/test_verizon_fetch.py.",
+      "source_nodes": [
+        "test:tests/test_verizon_fetch.py:test_resolve_download_dest_keeps_plain_pdf_name"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "test:tests/test_verizon_fetch.py:test_choose_monthly_category",
+      "kind": "symbol",
+      "text": "test test_choose_monthly_category in tests/test_verizon_fetch.py.",
+      "source_nodes": [
+        "test:tests/test_verizon_fetch.py:test_choose_monthly_category"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "test:tests/test_verizon_fetch.py:test_choose_newest_bill_label",
+      "kind": "symbol",
+      "text": "test test_choose_newest_bill_label in tests/test_verizon_fetch.py.",
+      "source_nodes": [
+        "test:tests/test_verizon_fetch.py:test_choose_newest_bill_label"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "test:tests/test_verizon_fetch.py:test_is_pdf_response",
+      "kind": "symbol",
+      "text": "test test_is_pdf_response in tests/test_verizon_fetch.py.",
+      "source_nodes": [
+        "test:tests/test_verizon_fetch.py:test_is_pdf_response"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "test:tests/test_verizon_fetch.py:test_summarize_visible_controls_redacts_account_and_phone",
+      "kind": "symbol",
+      "text": "test test_summarize_visible_controls_redacts_account_and_phone in tests/test_verizon_fetch.py.",
+      "source_nodes": [
+        "test:tests/test_verizon_fetch.py:test_summarize_visible_controls_redacts_account_and_phone"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "test:tests/test_verizon_fetch.py:test_summarize_visible_controls_truncates_and_caps_count",
+      "kind": "symbol",
+      "text": "test test_summarize_visible_controls_truncates_and_caps_count in tests/test_verizon_fetch.py.",
+      "source_nodes": [
+        "test:tests/test_verizon_fetch.py:test_summarize_visible_controls_truncates_and_caps_count"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "test:tests/test_verizon_fetch.py:test_summarize_visible_controls_empty",
+      "kind": "symbol",
+      "text": "test test_summarize_visible_controls_empty in tests/test_verizon_fetch.py.",
+      "source_nodes": [
+        "test:tests/test_verizon_fetch.py:test_summarize_visible_controls_empty"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "test:tests/test_verizon_fetch.py:test_safe_log_url_strips_query",
+      "kind": "symbol",
+      "text": "test test_safe_log_url_strips_query in tests/test_verizon_fetch.py.",
+      "source_nodes": [
+        "test:tests/test_verizon_fetch.py:test_safe_log_url_strips_query"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "file:verizon_bill_splitter/__init__.py",
+      "kind": "file",
+      "text": "file __init__.py in verizon_bill_splitter/__init__.py.",
+      "source_nodes": [
+        "file:verizon_bill_splitter/__init__.py"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "file:verizon_bill_splitter/cli.py",
+      "kind": "file",
+      "text": "CLI for parsing bill PDFs. --fetch reads the Drive CSV cutoff and downloads only newer Verizon bills.",
+      "source_nodes": [
+        "file:verizon_bill_splitter/cli.py"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": true
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/cli.py:build_parser",
+      "kind": "symbol",
+      "text": "function build_parser in verizon_bill_splitter/cli.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/cli.py:build_parser"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/cli.py:_print_bill_status",
+      "kind": "symbol",
+      "text": "function _print_bill_status in verizon_bill_splitter/cli.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/cli.py:_print_bill_status"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/cli.py:_resolve_pdfs",
+      "kind": "symbol",
+      "text": "function _resolve_pdfs in verizon_bill_splitter/cli.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/cli.py:_resolve_pdfs"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/cli.py:_parse_one",
+      "kind": "symbol",
+      "text": "function _parse_one in verizon_bill_splitter/cli.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/cli.py:_parse_one"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/cli.py:_maybe_upload_to_drive",
+      "kind": "symbol",
+      "text": "function _maybe_upload_to_drive in verizon_bill_splitter/cli.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/cli.py:_maybe_upload_to_drive"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/cli.py:_storage_state_path",
+      "kind": "symbol",
+      "text": "function _storage_state_path in verizon_bill_splitter/cli.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/cli.py:_storage_state_path"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/cli.py:_run_login",
+      "kind": "symbol",
+      "text": "function _run_login in verizon_bill_splitter/cli.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/cli.py:_run_login"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/cli.py:_run_fetch",
+      "kind": "symbol",
+      "text": "function _run_fetch in verizon_bill_splitter/cli.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/cli.py:_run_fetch"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/cli.py:main",
+      "kind": "symbol",
+      "text": "function main in verizon_bill_splitter/cli.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/cli.py:main"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "file:verizon_bill_splitter/drive.py",
+      "kind": "file",
+      "text": "Uploads charges.csv to Google Drive by default, updating the existing file and keeping Drive-only rows.",
+      "source_nodes": [
+        "file:verizon_bill_splitter/drive.py"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": true
+      }
+    },
+    {
+      "id": "class:verizon_bill_splitter/drive.py:DriveConfig",
+      "kind": "symbol",
+      "text": "class DriveConfig in verizon_bill_splitter/drive.py.",
+      "source_nodes": [
+        "class:verizon_bill_splitter/drive.py:DriveConfig"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/drive.py:load_drive_config",
+      "kind": "symbol",
+      "text": "function load_drive_config in verizon_bill_splitter/drive.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/drive.py:load_drive_config"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/drive.py:save_drive_config",
+      "kind": "symbol",
+      "text": "function save_drive_config in verizon_bill_splitter/drive.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/drive.py:save_drive_config"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/drive.py:_escape_query_value",
+      "kind": "symbol",
+      "text": "function _escape_query_value in verizon_bill_splitter/drive.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/drive.py:_escape_query_value"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/drive.py:_folder_parts",
+      "kind": "symbol",
+      "text": "function _folder_parts in verizon_bill_splitter/drive.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/drive.py:_folder_parts"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/drive.py:_find_folder",
+      "kind": "symbol",
+      "text": "function _find_folder in verizon_bill_splitter/drive.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/drive.py:_find_folder"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/drive.py:_create_folder",
+      "kind": "symbol",
+      "text": "function _create_folder in verizon_bill_splitter/drive.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/drive.py:_create_folder"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/drive.py:ensure_folder_path",
+      "kind": "symbol",
+      "text": "function ensure_folder_path in verizon_bill_splitter/drive.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/drive.py:ensure_folder_path"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/drive.py:_cached_folder_id",
+      "kind": "symbol",
+      "text": "function _cached_folder_id in verizon_bill_splitter/drive.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/drive.py:_cached_folder_id"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/drive.py:_folder_is_empty",
+      "kind": "symbol",
+      "text": "function _folder_is_empty in verizon_bill_splitter/drive.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/drive.py:_folder_is_empty"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/drive.py:_trash_drive_item",
+      "kind": "symbol",
+      "text": "function _trash_drive_item in verizon_bill_splitter/drive.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/drive.py:_trash_drive_item"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/drive.py:_remove_stale_drive_folders",
+      "kind": "symbol",
+      "text": "function _remove_stale_drive_folders in verizon_bill_splitter/drive.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/drive.py:_remove_stale_drive_folders"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/drive.py:_find_file",
+      "kind": "symbol",
+      "text": "function _find_file in verizon_bill_splitter/drive.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/drive.py:_find_file"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/drive.py:upload_csv",
+      "kind": "symbol",
+      "text": "function upload_csv in verizon_bill_splitter/drive.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/drive.py:upload_csv"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/drive.py:get_drive_service",
+      "kind": "symbol",
+      "text": "function get_drive_service in verizon_bill_splitter/drive.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/drive.py:get_drive_service"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/drive.py:upload_csv_to_drive",
+      "kind": "symbol",
+      "text": "function upload_csv_to_drive in verizon_bill_splitter/drive.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/drive.py:upload_csv_to_drive"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "file:verizon_bill_splitter/logging_config.py",
+      "kind": "file",
+      "text": "Configures package logging and quiets pdfminer font warnings.",
+      "source_nodes": [
+        "file:verizon_bill_splitter/logging_config.py"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": true
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/logging_config.py:configure_logging",
+      "kind": "symbol",
+      "text": "function configure_logging in verizon_bill_splitter/logging_config.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/logging_config.py:configure_logging"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "file:verizon_bill_splitter/manifest.py",
+      "kind": "file",
+      "text": "Tracks which PDFs were already parsed.",
+      "source_nodes": [
+        "file:verizon_bill_splitter/manifest.py"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": true
+      }
+    },
+    {
+      "id": "class:verizon_bill_splitter/manifest.py:BillParseStatus",
+      "kind": "symbol",
+      "text": "class BillParseStatus in verizon_bill_splitter/manifest.py.",
+      "source_nodes": [
+        "class:verizon_bill_splitter/manifest.py:BillParseStatus"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "method:verizon_bill_splitter/manifest.py:BillParseStatus.all_pdfs",
+      "kind": "symbol",
+      "text": "method BillParseStatus.all_pdfs in verizon_bill_splitter/manifest.py.",
+      "source_nodes": [
+        "method:verizon_bill_splitter/manifest.py:BillParseStatus.all_pdfs"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/manifest.py:manifest_path",
+      "kind": "symbol",
+      "text": "function manifest_path in verizon_bill_splitter/manifest.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/manifest.py:manifest_path"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/manifest.py:_manifest_key",
+      "kind": "symbol",
+      "text": "function _manifest_key in verizon_bill_splitter/manifest.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/manifest.py:_manifest_key"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/manifest.py:_file_signature",
+      "kind": "symbol",
+      "text": "function _file_signature in verizon_bill_splitter/manifest.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/manifest.py:_file_signature"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/manifest.py:_normalize_manifest",
+      "kind": "symbol",
+      "text": "function _normalize_manifest in verizon_bill_splitter/manifest.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/manifest.py:_normalize_manifest"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/manifest.py:load_manifest",
+      "kind": "symbol",
+      "text": "function load_manifest in verizon_bill_splitter/manifest.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/manifest.py:load_manifest"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/manifest.py:save_manifest",
+      "kind": "symbol",
+      "text": "function save_manifest in verizon_bill_splitter/manifest.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/manifest.py:save_manifest"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/manifest.py:is_parsed",
+      "kind": "symbol",
+      "text": "function is_parsed in verizon_bill_splitter/manifest.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/manifest.py:is_parsed"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/manifest.py:mark_parsed",
+      "kind": "symbol",
+      "text": "function mark_parsed in verizon_bill_splitter/manifest.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/manifest.py:mark_parsed"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/manifest.py:classify_pdfs",
+      "kind": "symbol",
+      "text": "function classify_pdfs in verizon_bill_splitter/manifest.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/manifest.py:classify_pdfs"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/manifest.py:list_unparsed_pdfs",
+      "kind": "symbol",
+      "text": "function list_unparsed_pdfs in verizon_bill_splitter/manifest.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/manifest.py:list_unparsed_pdfs"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "file:verizon_bill_splitter/parser.py",
+      "kind": "file",
+      "text": "Parses bill PDFs and merges local charge rows with Drive rows so paid values and Drive-only rows stay.",
+      "source_nodes": [
+        "file:verizon_bill_splitter/parser.py"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": true
+      }
+    },
+    {
+      "id": "class:verizon_bill_splitter/parser.py:LineCharge",
+      "kind": "symbol",
+      "text": "class LineCharge in verizon_bill_splitter/parser.py.",
+      "source_nodes": [
+        "class:verizon_bill_splitter/parser.py:LineCharge"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "class:verizon_bill_splitter/parser.py:BillParseResult",
+      "kind": "symbol",
+      "text": "class BillParseResult in verizon_bill_splitter/parser.py.",
+      "source_nodes": [
+        "class:verizon_bill_splitter/parser.py:BillParseResult"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "method:verizon_bill_splitter/parser.py:BillParseResult.to_dataframe",
+      "kind": "symbol",
+      "text": "method BillParseResult.to_dataframe in verizon_bill_splitter/parser.py.",
+      "source_nodes": [
+        "method:verizon_bill_splitter/parser.py:BillParseResult.to_dataframe"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/parser.py:normalize_phone",
+      "kind": "symbol",
+      "text": "function normalize_phone in verizon_bill_splitter/parser.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/parser.py:normalize_phone"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/parser.py:parse_amount",
+      "kind": "symbol",
+      "text": "function parse_amount in verizon_bill_splitter/parser.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/parser.py:parse_amount"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/parser.py:load_user_map",
+      "kind": "symbol",
+      "text": "function load_user_map in verizon_bill_splitter/parser.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/parser.py:load_user_map"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/parser.py:extract_metadata_from_text",
+      "kind": "symbol",
+      "text": "function extract_metadata_from_text in verizon_bill_splitter/parser.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/parser.py:extract_metadata_from_text"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/parser.py:parse_bill_pdf",
+      "kind": "symbol",
+      "text": "function parse_bill_pdf in verizon_bill_splitter/parser.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/parser.py:parse_bill_pdf"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/parser.py:_bill_date_from_filename",
+      "kind": "symbol",
+      "text": "function _bill_date_from_filename in verizon_bill_splitter/parser.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/parser.py:_bill_date_from_filename"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/parser.py:_find_summary_page",
+      "kind": "symbol",
+      "text": "function _find_summary_page in verizon_bill_splitter/parser.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/parser.py:_find_summary_page"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/parser.py:_extract_line_charges",
+      "kind": "symbol",
+      "text": "function _extract_line_charges in verizon_bill_splitter/parser.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/parser.py:_extract_line_charges"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/parser.py:_left_column_words",
+      "kind": "symbol",
+      "text": "function _left_column_words in verizon_bill_splitter/parser.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/parser.py:_left_column_words"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/parser.py:_line_amount_word",
+      "kind": "symbol",
+      "text": "function _line_amount_word in verizon_bill_splitter/parser.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/parser.py:_line_amount_word"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/parser.py:_is_status_row",
+      "kind": "symbol",
+      "text": "function _is_status_row in verizon_bill_splitter/parser.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/parser.py:_is_status_row"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/parser.py:_is_device_row",
+      "kind": "symbol",
+      "text": "function _is_device_row in verizon_bill_splitter/parser.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/parser.py:_is_device_row"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/parser.py:_find_device_row",
+      "kind": "symbol",
+      "text": "function _find_device_row in verizon_bill_splitter/parser.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/parser.py:_find_device_row"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/parser.py:_parse_summary_coordinate_rows",
+      "kind": "symbol",
+      "text": "function _parse_summary_coordinate_rows in verizon_bill_splitter/parser.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/parser.py:_parse_summary_coordinate_rows"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/parser.py:_group_words_into_rows",
+      "kind": "symbol",
+      "text": "function _group_words_into_rows in verizon_bill_splitter/parser.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/parser.py:_group_words_into_rows"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/parser.py:_row_text",
+      "kind": "symbol",
+      "text": "function _row_text in verizon_bill_splitter/parser.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/parser.py:_row_text"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/parser.py:_is_account_wide",
+      "kind": "symbol",
+      "text": "function _is_account_wide in verizon_bill_splitter/parser.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/parser.py:_is_account_wide"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/parser.py:_should_skip",
+      "kind": "symbol",
+      "text": "function _should_skip in verizon_bill_splitter/parser.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/parser.py:_should_skip"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/parser.py:_split_line_parts",
+      "kind": "symbol",
+      "text": "function _split_line_parts in verizon_bill_splitter/parser.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/parser.py:_split_line_parts"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/parser.py:_extract_name",
+      "kind": "symbol",
+      "text": "function _extract_name in verizon_bill_splitter/parser.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/parser.py:_extract_name"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/parser.py:aggregated_csv_path",
+      "kind": "symbol",
+      "text": "function aggregated_csv_path in verizon_bill_splitter/parser.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/parser.py:aggregated_csv_path"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/parser.py:_format_billing_period",
+      "kind": "symbol",
+      "text": "function _format_billing_period in verizon_bill_splitter/parser.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/parser.py:_format_billing_period"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/parser.py:_format_charge_type",
+      "kind": "symbol",
+      "text": "function _format_charge_type in verizon_bill_splitter/parser.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/parser.py:_format_charge_type"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/parser.py:_export_row_key",
+      "kind": "symbol",
+      "text": "function _export_row_key in verizon_bill_splitter/parser.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/parser.py:_export_row_key"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/parser.py:_load_paid_map",
+      "kind": "symbol",
+      "text": "function _load_paid_map in verizon_bill_splitter/parser.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/parser.py:_load_paid_map"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/parser.py:_apply_paid",
+      "kind": "symbol",
+      "text": "function _apply_paid in verizon_bill_splitter/parser.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/parser.py:_apply_paid"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/parser.py:prepare_export_dataframe",
+      "kind": "symbol",
+      "text": "function prepare_export_dataframe in verizon_bill_splitter/parser.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/parser.py:prepare_export_dataframe"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/parser.py:_sort_charges",
+      "kind": "symbol",
+      "text": "function _sort_charges in verizon_bill_splitter/parser.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/parser.py:_sort_charges"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/parser.py:write_aggregated_csv",
+      "kind": "symbol",
+      "text": "function write_aggregated_csv in verizon_bill_splitter/parser.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/parser.py:write_aggregated_csv"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/parser.py:merge_into_aggregated_csv",
+      "kind": "symbol",
+      "text": "function merge_into_aggregated_csv in verizon_bill_splitter/parser.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/parser.py:merge_into_aggregated_csv"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "file:verizon_bill_splitter/verizon_fetch.py",
+      "kind": "file",
+      "text": "Downloads newer Verizon bill PDFs. A View PDF that does not yield a file is skipped so earlier downloads are still returned.",
+      "source_nodes": [
+        "file:verizon_bill_splitter/verizon_fetch.py"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": true
+      }
+    },
+    {
+      "id": "class:verizon_bill_splitter/verizon_fetch.py:VerizonFetchError",
+      "kind": "symbol",
+      "text": "class VerizonFetchError in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "class:verizon_bill_splitter/verizon_fetch.py:VerizonFetchError"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/verizon_fetch.py:default_storage_state_path",
+      "kind": "symbol",
+      "text": "function default_storage_state_path in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/verizon_fetch.py:default_storage_state_path"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/verizon_fetch.py:looks_like_login_url",
+      "kind": "symbol",
+      "text": "function looks_like_login_url in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/verizon_fetch.py:looks_like_login_url"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/verizon_fetch.py:bill_pdf_filename",
+      "kind": "symbol",
+      "text": "function bill_pdf_filename in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/verizon_fetch.py:bill_pdf_filename"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/verizon_fetch.py:parse_bill_date_string",
+      "kind": "symbol",
+      "text": "function parse_bill_date_string in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/verizon_fetch.py:parse_bill_date_string"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/verizon_fetch.py:resolve_download_dest",
+      "kind": "symbol",
+      "text": "function resolve_download_dest in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/verizon_fetch.py:resolve_download_dest"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/verizon_fetch.py:_normalize_label",
+      "kind": "symbol",
+      "text": "function _normalize_label in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/verizon_fetch.py:_normalize_label"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/verizon_fetch.py:choose_monthly_category",
+      "kind": "symbol",
+      "text": "function choose_monthly_category in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/verizon_fetch.py:choose_monthly_category"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/verizon_fetch.py:_looks_like_bill_document",
+      "kind": "symbol",
+      "text": "function _looks_like_bill_document in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/verizon_fetch.py:_looks_like_bill_document"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/verizon_fetch.py:is_view_pdf_label",
+      "kind": "symbol",
+      "text": "function is_view_pdf_label in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/verizon_fetch.py:is_view_pdf_label"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/verizon_fetch.py:choose_newest_bill_label",
+      "kind": "symbol",
+      "text": "function choose_newest_bill_label in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/verizon_fetch.py:choose_newest_bill_label"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/verizon_fetch.py:_media_type",
+      "kind": "symbol",
+      "text": "function _media_type in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/verizon_fetch.py:_media_type"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/verizon_fetch.py:looks_like_pdf_bytes",
+      "kind": "symbol",
+      "text": "function looks_like_pdf_bytes in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/verizon_fetch.py:looks_like_pdf_bytes"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/verizon_fetch.py:is_pdf_response",
+      "kind": "symbol",
+      "text": "function is_pdf_response in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/verizon_fetch.py:is_pdf_response"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/verizon_fetch.py:redact_control_text",
+      "kind": "symbol",
+      "text": "function redact_control_text in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/verizon_fetch.py:redact_control_text"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/verizon_fetch.py:summarize_visible_controls",
+      "kind": "symbol",
+      "text": "function summarize_visible_controls in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/verizon_fetch.py:summarize_visible_controls"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/verizon_fetch.py:safe_log_url",
+      "kind": "symbol",
+      "text": "function safe_log_url in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/verizon_fetch.py:safe_log_url"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/verizon_fetch.py:_wait_for_manual_login",
+      "kind": "symbol",
+      "text": "function _wait_for_manual_login in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/verizon_fetch.py:_wait_for_manual_login"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/verizon_fetch.py:_save_storage_state",
+      "kind": "symbol",
+      "text": "function _save_storage_state in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/verizon_fetch.py:_save_storage_state"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/verizon_fetch.py:_page_bill_date",
+      "kind": "symbol",
+      "text": "function _page_bill_date in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/verizon_fetch.py:_page_bill_date"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/verizon_fetch.py:_read_locator_labels",
+      "kind": "symbol",
+      "text": "function _read_locator_labels in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/verizon_fetch.py:_read_locator_labels"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/verizon_fetch.py:_visible_control_texts",
+      "kind": "symbol",
+      "text": "function _visible_control_texts in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/verizon_fetch.py:_visible_control_texts"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/verizon_fetch.py:_visible_document_labels",
+      "kind": "symbol",
+      "text": "function _visible_document_labels in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/verizon_fetch.py:_visible_document_labels"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/verizon_fetch.py:_failure_message",
+      "kind": "symbol",
+      "text": "function _failure_message in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/verizon_fetch.py:_failure_message"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/verizon_fetch.py:_wait_for_documents_ui",
+      "kind": "symbol",
+      "text": "function _wait_for_documents_ui in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/verizon_fetch.py:_wait_for_documents_ui"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/verizon_fetch.py:_open_bills_page",
+      "kind": "symbol",
+      "text": "function _open_bills_page in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/verizon_fetch.py:_open_bills_page"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/verizon_fetch.py:_click_label",
+      "kind": "symbol",
+      "text": "function _click_label in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/verizon_fetch.py:_click_label"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/verizon_fetch.py:_select_native_option",
+      "kind": "symbol",
+      "text": "function _select_native_option in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/verizon_fetch.py:_select_native_option"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/verizon_fetch.py:_open_category_menu",
+      "kind": "symbol",
+      "text": "function _open_category_menu in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/verizon_fetch.py:_open_category_menu"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/verizon_fetch.py:_choose_open_menu_category",
+      "kind": "symbol",
+      "text": "function _choose_open_menu_category in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/verizon_fetch.py:_choose_open_menu_category"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/verizon_fetch.py:_select_monthly_category",
+      "kind": "symbol",
+      "text": "function _select_monthly_category in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/verizon_fetch.py:_select_monthly_category"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/verizon_fetch.py:_select_monthly_category_control",
+      "kind": "symbol",
+      "text": "function _select_monthly_category_control in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/verizon_fetch.py:_select_monthly_category_control"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/verizon_fetch.py:_wait_for_bill_list",
+      "kind": "symbol",
+      "text": "function _wait_for_bill_list in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/verizon_fetch.py:_wait_for_bill_list"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/verizon_fetch.py:_verizon_host",
+      "kind": "symbol",
+      "text": "function _verizon_host in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/verizon_fetch.py:_verizon_host"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/verizon_fetch.py:_safe_suggested_name",
+      "kind": "symbol",
+      "text": "function _safe_suggested_name in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/verizon_fetch.py:_safe_suggested_name"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/verizon_fetch.py:_suggested_filename",
+      "kind": "symbol",
+      "text": "function _suggested_filename in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/verizon_fetch.py:_suggested_filename"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "class:verizon_bill_splitter/verizon_fetch.py:_CapturedPdf",
+      "kind": "symbol",
+      "text": "class _CapturedPdf in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "class:verizon_bill_splitter/verizon_fetch.py:_CapturedPdf"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "method:verizon_bill_splitter/verizon_fetch.py:_CapturedPdf.__init__",
+      "kind": "symbol",
+      "text": "method _CapturedPdf.__init__ in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "method:verizon_bill_splitter/verizon_fetch.py:_CapturedPdf.__init__"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "method:verizon_bill_splitter/verizon_fetch.py:_CapturedPdf.save",
+      "kind": "symbol",
+      "text": "method _CapturedPdf.save in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "method:verizon_bill_splitter/verizon_fetch.py:_CapturedPdf.save"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/verizon_fetch.py:_assert_saved_pdf",
+      "kind": "symbol",
+      "text": "function _assert_saved_pdf in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/verizon_fetch.py:_assert_saved_pdf"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/verizon_fetch.py:_take_pending_pdf",
+      "kind": "symbol",
+      "text": "function _take_pending_pdf in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/verizon_fetch.py:_take_pending_pdf"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/verizon_fetch.py:_capture_popup_pdf",
+      "kind": "symbol",
+      "text": "function _capture_popup_pdf in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/verizon_fetch.py:_capture_popup_pdf"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/verizon_fetch.py:_capture_pdf_from_action",
+      "kind": "symbol",
+      "text": "function _capture_pdf_from_action in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/verizon_fetch.py:_capture_pdf_from_action"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/verizon_fetch.py:_download_from_documents",
+      "kind": "symbol",
+      "text": "function _download_from_documents in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/verizon_fetch.py:_download_from_documents"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/verizon_fetch.py:_click_first_download",
+      "kind": "symbol",
+      "text": "function _click_first_download in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/verizon_fetch.py:_click_first_download"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/verizon_fetch.py:_acquire_bill_pdf",
+      "kind": "symbol",
+      "text": "function _acquire_bill_pdf in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/verizon_fetch.py:_acquire_bill_pdf"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/verizon_fetch.py:login_and_save_session",
+      "kind": "symbol",
+      "text": "function login_and_save_session in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/verizon_fetch.py:login_and_save_session"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/verizon_fetch.py:fetch_latest_bill",
+      "kind": "symbol",
+      "text": "function fetch_latest_bill in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/verizon_fetch.py:fetch_latest_bill"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "file:README.md",
+      "kind": "file",
+      "text": "file README.md in README.md.",
+      "source_nodes": [
+        "file:README.md"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "file:CODEBASE_INDEX.md",
+      "kind": "file",
+      "text": "file CODEBASE_INDEX.md in CODEBASE_INDEX.md.",
+      "source_nodes": [
+        "file:CODEBASE_INDEX.md"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "community:0",
+      "kind": "community",
+      "text": "CLI tool that downloads a Verizon bill PDF with Playwright and parses it into one aggregated CSV. Fetch opens Documents & Receipts, selects Monthly Bills, and clicks the latest bill title.",
+      "source_nodes": [
+        "repository:verizon-bill-splitter"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": true
+      }
+    },
+    {
+      "id": "community:1",
+      "kind": "community",
+      "text": "Nodes: file:parse_bill.py, file:verizon_bill_splitter/cli.py, file:verizon_bill_splitter/logging_config.py",
+      "source_nodes": [
+        "file:parse_bill.py",
+        "file:verizon_bill_splitter/cli.py",
+        "file:verizon_bill_splitter/logging_config.py"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "community:1:symbols",
+      "kind": "community",
+      "text": "Nodes: function:verizon_bill_splitter/cli.py:build_parser, function:verizon_bill_splitter/cli.py:_print_bill_status, function:verizon_bill_splitter/cli.py:_resolve_pdfs, function:verizon_bill_splitter/cli.py:_parse_one, function:verizon_bill_splitter/cli.py:_maybe_upload_to_drive, function:verizon_bill_splitter/cli.py:_storage_state_path, function:verizon_bill_splitter/cli.py:_run_login, function:verizon_bill_splitter/cli.py:_run_fetch, function:verizon_bill_splitter/cli.py:main, function:verizon_bill_splitter/logging_config.py:configure_logging",
+      "source_nodes": [
+        "function:verizon_bill_splitter/cli.py:build_parser",
+        "function:verizon_bill_splitter/cli.py:_print_bill_status",
+        "function:verizon_bill_splitter/cli.py:_resolve_pdfs",
+        "function:verizon_bill_splitter/cli.py:_parse_one",
+        "function:verizon_bill_splitter/cli.py:_maybe_upload_to_drive",
+        "function:verizon_bill_splitter/cli.py:_storage_state_path",
+        "function:verizon_bill_splitter/cli.py:_run_login",
+        "function:verizon_bill_splitter/cli.py:_run_fetch",
+        "function:verizon_bill_splitter/cli.py:main",
+        "function:verizon_bill_splitter/logging_config.py:configure_logging"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "community:2",
+      "kind": "community",
+      "text": "Nodes: file:tests/test_drive.py, file:verizon_bill_splitter/drive.py",
+      "source_nodes": [
+        "file:tests/test_drive.py",
+        "file:verizon_bill_splitter/drive.py"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "community:2:symbols",
+      "kind": "community",
+      "text": "Nodes: test:tests/test_drive.py:test_escape_query_value, test:tests/test_drive.py:test_folder_parts, test:tests/test_drive.py:test_load_drive_config_disabled, test:tests/test_drive.py:test_load_drive_config_enabled, test:tests/test_drive.py:test_cached_folder_id_ignores_stale_path, test:tests/test_drive.py:test_save_drive_config_round_trip, test:tests/test_drive.py:test_ensure_folder_path_uses_cache, test:tests/test_drive.py:test_ensure_folder_path_creates_missing_folders, test:tests/test_drive.py:test_upload_csv_updates_existing_file, test:tests/test_drive.py:test_upload_csv_to_drive_persists_folder_id, class:verizon_bill_splitter/drive.py:DriveConfig, function:verizon_bill_splitter/drive.py:load_drive_config",
+      "source_nodes": [
+        "test:tests/test_drive.py:test_escape_query_value",
+        "test:tests/test_drive.py:test_folder_parts",
+        "test:tests/test_drive.py:test_load_drive_config_disabled",
+        "test:tests/test_drive.py:test_load_drive_config_enabled",
+        "test:tests/test_drive.py:test_cached_folder_id_ignores_stale_path",
+        "test:tests/test_drive.py:test_save_drive_config_round_trip",
+        "test:tests/test_drive.py:test_ensure_folder_path_uses_cache",
+        "test:tests/test_drive.py:test_ensure_folder_path_creates_missing_folders",
+        "test:tests/test_drive.py:test_upload_csv_updates_existing_file",
+        "test:tests/test_drive.py:test_upload_csv_to_drive_persists_folder_id",
+        "class:verizon_bill_splitter/drive.py:DriveConfig",
+        "function:verizon_bill_splitter/drive.py:load_drive_config",
+        "function:verizon_bill_splitter/drive.py:save_drive_config",
+        "function:verizon_bill_splitter/drive.py:_escape_query_value",
+        "function:verizon_bill_splitter/drive.py:_folder_parts",
+        "function:verizon_bill_splitter/drive.py:_find_folder",
+        "function:verizon_bill_splitter/drive.py:_create_folder",
+        "function:verizon_bill_splitter/drive.py:ensure_folder_path",
+        "function:verizon_bill_splitter/drive.py:_cached_folder_id",
+        "function:verizon_bill_splitter/drive.py:_folder_is_empty",
+        "function:verizon_bill_splitter/drive.py:_trash_drive_item",
+        "function:verizon_bill_splitter/drive.py:_remove_stale_drive_folders",
+        "function:verizon_bill_splitter/drive.py:_find_file",
+        "function:verizon_bill_splitter/drive.py:upload_csv",
+        "function:verizon_bill_splitter/drive.py:get_drive_service",
+        "function:verizon_bill_splitter/drive.py:upload_csv_to_drive"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "community:3",
+      "kind": "community",
+      "text": "Nodes: file:tests/test_manifest.py, file:verizon_bill_splitter/manifest.py",
+      "source_nodes": [
+        "file:tests/test_manifest.py",
+        "file:verizon_bill_splitter/manifest.py"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "community:3:symbols",
+      "kind": "community",
+      "text": "Nodes: test:tests/test_manifest.py:test_mark_and_detect_parsed, test:tests/test_manifest.py:test_changed_pdf_is_unparsed, test:tests/test_manifest.py:test_list_unparsed_pdfs, test:tests/test_manifest.py:test_classify_pdfs, test:tests/test_manifest.py:test_migrates_absolute_path_manifest_keys, class:verizon_bill_splitter/manifest.py:BillParseStatus, method:verizon_bill_splitter/manifest.py:BillParseStatus.all_pdfs, function:verizon_bill_splitter/manifest.py:manifest_path, function:verizon_bill_splitter/manifest.py:_manifest_key, function:verizon_bill_splitter/manifest.py:_file_signature, function:verizon_bill_splitter/manifest.py:_normalize_manifest, function:verizon_bill_splitter/manifest.py:load_manifest",
+      "source_nodes": [
+        "test:tests/test_manifest.py:test_mark_and_detect_parsed",
+        "test:tests/test_manifest.py:test_changed_pdf_is_unparsed",
+        "test:tests/test_manifest.py:test_list_unparsed_pdfs",
+        "test:tests/test_manifest.py:test_classify_pdfs",
+        "test:tests/test_manifest.py:test_migrates_absolute_path_manifest_keys",
+        "class:verizon_bill_splitter/manifest.py:BillParseStatus",
+        "method:verizon_bill_splitter/manifest.py:BillParseStatus.all_pdfs",
+        "function:verizon_bill_splitter/manifest.py:manifest_path",
+        "function:verizon_bill_splitter/manifest.py:_manifest_key",
+        "function:verizon_bill_splitter/manifest.py:_file_signature",
+        "function:verizon_bill_splitter/manifest.py:_normalize_manifest",
+        "function:verizon_bill_splitter/manifest.py:load_manifest",
+        "function:verizon_bill_splitter/manifest.py:save_manifest",
+        "function:verizon_bill_splitter/manifest.py:is_parsed",
+        "function:verizon_bill_splitter/manifest.py:mark_parsed",
+        "function:verizon_bill_splitter/manifest.py:classify_pdfs",
+        "function:verizon_bill_splitter/manifest.py:list_unparsed_pdfs"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "community:4",
+      "kind": "community",
+      "text": "Nodes: file:tests/test_parser.py, file:verizon_bill_splitter/__init__.py, file:verizon_bill_splitter/parser.py",
+      "source_nodes": [
+        "file:tests/test_parser.py",
+        "file:verizon_bill_splitter/__init__.py",
+        "file:verizon_bill_splitter/parser.py"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "community:4:symbols",
+      "kind": "community",
+      "text": "Nodes: test:tests/test_parser.py:test_normalize_phone, test:tests/test_parser.py:test_parse_amount, test:tests/test_parser.py:test_extract_name, test:tests/test_parser.py:test_split_line_parts, test:tests/test_parser.py:test_should_skip_total_row, test:tests/test_parser.py:test_is_account_wide, test:tests/test_parser.py:test_extract_metadata_from_text, test:tests/test_parser.py:test_parse_summary_rows_simple, test:tests/test_parser.py:test_parse_summary_rows_account_wide, function:tests/test_parser.py:_sample_frame, test:tests/test_parser.py:test_write_aggregated_csv, test:tests/test_parser.py:test_prepare_export_dataframe_drops_redundant_columns",
+      "source_nodes": [
+        "test:tests/test_parser.py:test_normalize_phone",
+        "test:tests/test_parser.py:test_parse_amount",
+        "test:tests/test_parser.py:test_extract_name",
+        "test:tests/test_parser.py:test_split_line_parts",
+        "test:tests/test_parser.py:test_should_skip_total_row",
+        "test:tests/test_parser.py:test_is_account_wide",
+        "test:tests/test_parser.py:test_extract_metadata_from_text",
+        "test:tests/test_parser.py:test_parse_summary_rows_simple",
+        "test:tests/test_parser.py:test_parse_summary_rows_account_wide",
+        "function:tests/test_parser.py:_sample_frame",
+        "test:tests/test_parser.py:test_write_aggregated_csv",
+        "test:tests/test_parser.py:test_prepare_export_dataframe_drops_redundant_columns",
+        "test:tests/test_parser.py:test_apply_paid_preserves_values_on_rebuild",
+        "test:tests/test_parser.py:test_merge_into_aggregated_csv_replaces_source",
+        "class:verizon_bill_splitter/parser.py:LineCharge",
+        "class:verizon_bill_splitter/parser.py:BillParseResult",
+        "method:verizon_bill_splitter/parser.py:BillParseResult.to_dataframe",
+        "function:verizon_bill_splitter/parser.py:normalize_phone",
+        "function:verizon_bill_splitter/parser.py:parse_amount",
+        "function:verizon_bill_splitter/parser.py:load_user_map",
+        "function:verizon_bill_splitter/parser.py:extract_metadata_from_text",
+        "function:verizon_bill_splitter/parser.py:parse_bill_pdf",
+        "function:verizon_bill_splitter/parser.py:_bill_date_from_filename",
+        "function:verizon_bill_splitter/parser.py:_find_summary_page",
+        "function:verizon_bill_splitter/parser.py:_extract_line_charges",
+        "function:verizon_bill_splitter/parser.py:_left_column_words",
+        "function:verizon_bill_splitter/parser.py:_line_amount_word",
+        "function:verizon_bill_splitter/parser.py:_is_status_row",
+        "function:verizon_bill_splitter/parser.py:_is_device_row",
+        "function:verizon_bill_splitter/parser.py:_find_device_row",
+        "function:verizon_bill_splitter/parser.py:_parse_summary_coordinate_rows",
+        "function:verizon_bill_splitter/parser.py:_group_words_into_rows",
+        "function:verizon_bill_splitter/parser.py:_row_text",
+        "function:verizon_bill_splitter/parser.py:_is_account_wide",
+        "function:verizon_bill_splitter/parser.py:_should_skip",
+        "function:verizon_bill_splitter/parser.py:_split_line_parts",
+        "function:verizon_bill_splitter/parser.py:_extract_name",
+        "function:verizon_bill_splitter/parser.py:aggregated_csv_path",
+        "function:verizon_bill_splitter/parser.py:_format_billing_period",
+        "function:verizon_bill_splitter/parser.py:_format_charge_type",
+        "function:verizon_bill_splitter/parser.py:_export_row_key",
+        "function:verizon_bill_splitter/parser.py:_load_paid_map",
+        "function:verizon_bill_splitter/parser.py:_apply_paid",
+        "function:verizon_bill_splitter/parser.py:prepare_export_dataframe",
+        "function:verizon_bill_splitter/parser.py:_sort_charges",
+        "function:verizon_bill_splitter/parser.py:write_aggregated_csv",
+        "function:verizon_bill_splitter/parser.py:merge_into_aggregated_csv"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "community:5",
+      "kind": "community",
+      "text": "Nodes: file:tests/test_verizon_fetch.py, file:verizon_bill_splitter/verizon_fetch.py",
+      "source_nodes": [
+        "file:tests/test_verizon_fetch.py",
+        "file:verizon_bill_splitter/verizon_fetch.py"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "community:5:symbols",
+      "kind": "community",
+      "text": "Nodes: test:tests/test_verizon_fetch.py:test_looks_like_login_url, test:tests/test_verizon_fetch.py:test_bill_pdf_filename_from_date, test:tests/test_verizon_fetch.py:test_bill_pdf_filename_from_string, test:tests/test_verizon_fetch.py:test_parse_bill_date_string, test:tests/test_verizon_fetch.py:test_resolve_download_dest_prefers_bill_date, test:tests/test_verizon_fetch.py:test_resolve_download_dest_from_suggested_filename, test:tests/test_verizon_fetch.py:test_resolve_download_dest_keeps_plain_pdf_name, test:tests/test_verizon_fetch.py:test_choose_monthly_category, test:tests/test_verizon_fetch.py:test_choose_newest_bill_label, test:tests/test_verizon_fetch.py:test_is_pdf_response, test:tests/test_verizon_fetch.py:test_summarize_visible_controls_redacts_account_and_phone, test:tests/test_verizon_fetch.py:test_summarize_visible_controls_truncates_and_caps_count",
+      "source_nodes": [
+        "test:tests/test_verizon_fetch.py:test_looks_like_login_url",
+        "test:tests/test_verizon_fetch.py:test_bill_pdf_filename_from_date",
+        "test:tests/test_verizon_fetch.py:test_bill_pdf_filename_from_string",
+        "test:tests/test_verizon_fetch.py:test_parse_bill_date_string",
+        "test:tests/test_verizon_fetch.py:test_resolve_download_dest_prefers_bill_date",
+        "test:tests/test_verizon_fetch.py:test_resolve_download_dest_from_suggested_filename",
+        "test:tests/test_verizon_fetch.py:test_resolve_download_dest_keeps_plain_pdf_name",
+        "test:tests/test_verizon_fetch.py:test_choose_monthly_category",
+        "test:tests/test_verizon_fetch.py:test_choose_newest_bill_label",
+        "test:tests/test_verizon_fetch.py:test_is_pdf_response",
+        "test:tests/test_verizon_fetch.py:test_summarize_visible_controls_redacts_account_and_phone",
+        "test:tests/test_verizon_fetch.py:test_summarize_visible_controls_truncates_and_caps_count",
+        "test:tests/test_verizon_fetch.py:test_summarize_visible_controls_empty",
+        "test:tests/test_verizon_fetch.py:test_safe_log_url_strips_query",
+        "class:verizon_bill_splitter/verizon_fetch.py:VerizonFetchError",
+        "function:verizon_bill_splitter/verizon_fetch.py:default_storage_state_path",
+        "function:verizon_bill_splitter/verizon_fetch.py:looks_like_login_url",
+        "function:verizon_bill_splitter/verizon_fetch.py:bill_pdf_filename",
+        "function:verizon_bill_splitter/verizon_fetch.py:parse_bill_date_string",
+        "function:verizon_bill_splitter/verizon_fetch.py:resolve_download_dest",
+        "function:verizon_bill_splitter/verizon_fetch.py:_normalize_label",
+        "function:verizon_bill_splitter/verizon_fetch.py:choose_monthly_category",
+        "function:verizon_bill_splitter/verizon_fetch.py:_looks_like_bill_document",
+        "function:verizon_bill_splitter/verizon_fetch.py:choose_newest_bill_label",
+        "function:verizon_bill_splitter/verizon_fetch.py:_media_type",
+        "function:verizon_bill_splitter/verizon_fetch.py:looks_like_pdf_bytes",
+        "function:verizon_bill_splitter/verizon_fetch.py:is_pdf_response",
+        "function:verizon_bill_splitter/verizon_fetch.py:redact_control_text",
+        "function:verizon_bill_splitter/verizon_fetch.py:summarize_visible_controls",
+        "function:verizon_bill_splitter/verizon_fetch.py:safe_log_url",
+        "function:verizon_bill_splitter/verizon_fetch.py:_wait_for_manual_login",
+        "function:verizon_bill_splitter/verizon_fetch.py:_save_storage_state",
+        "function:verizon_bill_splitter/verizon_fetch.py:_page_bill_date",
+        "function:verizon_bill_splitter/verizon_fetch.py:_read_locator_labels",
+        "function:verizon_bill_splitter/verizon_fetch.py:_visible_control_texts",
+        "function:verizon_bill_splitter/verizon_fetch.py:_visible_document_labels",
+        "function:verizon_bill_splitter/verizon_fetch.py:_failure_message",
+        "function:verizon_bill_splitter/verizon_fetch.py:_wait_for_documents_ui",
+        "function:verizon_bill_splitter/verizon_fetch.py:_open_bills_page",
+        "function:verizon_bill_splitter/verizon_fetch.py:_click_label",
+        "function:verizon_bill_splitter/verizon_fetch.py:_select_native_option",
+        "function:verizon_bill_splitter/verizon_fetch.py:_open_category_menu",
+        "function:verizon_bill_splitter/verizon_fetch.py:_choose_open_menu_category",
+        "function:verizon_bill_splitter/verizon_fetch.py:_select_monthly_category",
+        "function:verizon_bill_splitter/verizon_fetch.py:_select_monthly_category_control",
+        "function:verizon_bill_splitter/verizon_fetch.py:_wait_for_bill_list",
+        "function:verizon_bill_splitter/verizon_fetch.py:_verizon_host",
+        "function:verizon_bill_splitter/verizon_fetch.py:_safe_suggested_name",
+        "function:verizon_bill_splitter/verizon_fetch.py:_suggested_filename",
+        "class:verizon_bill_splitter/verizon_fetch.py:_CapturedPdf",
+        "method:verizon_bill_splitter/verizon_fetch.py:_CapturedPdf.__init__",
+        "method:verizon_bill_splitter/verizon_fetch.py:_CapturedPdf.save",
+        "function:verizon_bill_splitter/verizon_fetch.py:_assert_saved_pdf",
+        "function:verizon_bill_splitter/verizon_fetch.py:_take_pending_pdf",
+        "function:verizon_bill_splitter/verizon_fetch.py:_capture_popup_pdf",
+        "function:verizon_bill_splitter/verizon_fetch.py:_capture_pdf_from_action",
+        "function:verizon_bill_splitter/verizon_fetch.py:_download_from_documents",
+        "function:verizon_bill_splitter/verizon_fetch.py:_click_first_download",
+        "function:verizon_bill_splitter/verizon_fetch.py:_acquire_bill_pdf",
+        "function:verizon_bill_splitter/verizon_fetch.py:login_and_save_session",
+        "function:verizon_bill_splitter/verizon_fetch.py:fetch_latest_bill"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/drive.py:download_charges_csv",
+      "kind": "symbol",
+      "text": "function download_charges_csv in verizon_bill_splitter/drive.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/drive.py:download_charges_csv"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/drive.py:download_charges_csv_text",
+      "kind": "symbol",
+      "text": "function download_charges_csv_text in verizon_bill_splitter/drive.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/drive.py:download_charges_csv_text"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/verizon_fetch.py:parse_csv_bill_date",
+      "kind": "symbol",
+      "text": "function parse_csv_bill_date in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/verizon_fetch.py:parse_csv_bill_date"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/verizon_fetch.py:latest_bill_month",
+      "kind": "symbol",
+      "text": "function latest_bill_month in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/verizon_fetch.py:latest_bill_month"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/verizon_fetch.py:is_newer_bill_month",
+      "kind": "symbol",
+      "text": "function is_newer_bill_month in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/verizon_fetch.py:is_newer_bill_month"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/verizon_fetch.py:_view_pdf_locator",
+      "kind": "symbol",
+      "text": "function _view_pdf_locator in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/verizon_fetch.py:_view_pdf_locator"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/verizon_fetch.py:_bill_date_from_saved_pdf",
+      "kind": "symbol",
+      "text": "function _bill_date_from_saved_pdf in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/verizon_fetch.py:_bill_date_from_saved_pdf"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/verizon_fetch.py:_collect_missing_bills",
+      "kind": "symbol",
+      "text": "function _collect_missing_bills in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/verizon_fetch.py:_collect_missing_bills"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/verizon_fetch.py:fetch_missing_bills",
+      "kind": "symbol",
+      "text": "function fetch_missing_bills in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/verizon_fetch.py:fetch_missing_bills"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/cli.py:_csv_cutoff",
+      "kind": "symbol",
+      "text": "function _csv_cutoff in verizon_bill_splitter/cli.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/cli.py:_csv_cutoff"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:tests/test_drive.py:test_download_charges_csv_reads_existing_file",
+      "kind": "test",
+      "text": "test test_download_charges_csv_reads_existing_file in tests/test_drive.py.",
+      "source_nodes": [
+        "function:tests/test_drive.py:test_download_charges_csv_reads_existing_file"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:tests/test_drive.py:test_download_charges_csv_missing_file",
+      "kind": "test",
+      "text": "test test_download_charges_csv_missing_file in tests/test_drive.py.",
+      "source_nodes": [
+        "function:tests/test_drive.py:test_download_charges_csv_missing_file"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:tests/test_verizon_fetch.py:test_latest_bill_month_uses_newest_date",
+      "kind": "test",
+      "text": "test test_latest_bill_month_uses_newest_date in tests/test_verizon_fetch.py.",
+      "source_nodes": [
+        "function:tests/test_verizon_fetch.py:test_latest_bill_month_uses_newest_date"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:tests/test_verizon_fetch.py:test_latest_bill_month_empty",
+      "kind": "test",
+      "text": "test test_latest_bill_month_empty in tests/test_verizon_fetch.py.",
+      "source_nodes": [
+        "function:tests/test_verizon_fetch.py:test_latest_bill_month_empty"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:tests/test_verizon_fetch.py:test_is_newer_bill_month",
+      "kind": "test",
+      "text": "test test_is_newer_bill_month in tests/test_verizon_fetch.py.",
+      "source_nodes": [
+        "function:tests/test_verizon_fetch.py:test_is_newer_bill_month"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "test:tests/test_drive.py:test_download_charges_csv_reads_existing_file",
+      "kind": "test",
+      "text": "test test_download_charges_csv_reads_existing_file in tests/test_drive.py.",
+      "source_nodes": [
+        "test:tests/test_drive.py:test_download_charges_csv_reads_existing_file"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "test:tests/test_drive.py:test_download_charges_csv_missing_file",
+      "kind": "test",
+      "text": "test test_download_charges_csv_missing_file in tests/test_drive.py.",
+      "source_nodes": [
+        "test:tests/test_drive.py:test_download_charges_csv_missing_file"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "test:tests/test_verizon_fetch.py:test_latest_bill_month_uses_newest_date",
+      "kind": "test",
+      "text": "test test_latest_bill_month_uses_newest_date in tests/test_verizon_fetch.py.",
+      "source_nodes": [
+        "test:tests/test_verizon_fetch.py:test_latest_bill_month_uses_newest_date"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "test:tests/test_verizon_fetch.py:test_latest_bill_month_empty",
+      "kind": "test",
+      "text": "test test_latest_bill_month_empty in tests/test_verizon_fetch.py.",
+      "source_nodes": [
+        "test:tests/test_verizon_fetch.py:test_latest_bill_month_empty"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "test:tests/test_verizon_fetch.py:test_is_newer_bill_month",
+      "kind": "test",
+      "text": "test test_is_newer_bill_month in tests/test_verizon_fetch.py.",
+      "source_nodes": [
+        "test:tests/test_verizon_fetch.py:test_is_newer_bill_month"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/verizon_fetch.py:has_view_pdf_control",
+      "kind": "symbol",
+      "text": "function has_view_pdf_control in verizon_bill_splitter/verizon_fetch.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/verizon_fetch.py:has_view_pdf_control"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/parser.py:_read_export_csv",
+      "kind": "symbol",
+      "text": "function _read_export_csv in verizon_bill_splitter/parser.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/parser.py:_read_export_csv"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/parser.py:merge_charge_csv_texts",
+      "kind": "symbol",
+      "text": "function merge_charge_csv_texts in verizon_bill_splitter/parser.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/parser.py:merge_charge_csv_texts"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "function:verizon_bill_splitter/drive.py:default_drive_config",
+      "kind": "symbol",
+      "text": "function default_drive_config in verizon_bill_splitter/drive.py.",
+      "source_nodes": [
+        "function:verizon_bill_splitter/drive.py:default_drive_config"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "test:tests/test_parser.py:test_merge_charge_csv_texts_keeps_drive_rows_and_paid",
+      "kind": "test",
+      "text": "test test_merge_charge_csv_texts_keeps_drive_rows_and_paid in tests/test_parser.py.",
+      "source_nodes": [
+        "test:tests/test_parser.py:test_merge_charge_csv_texts_keeps_drive_rows_and_paid"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "test:tests/test_drive.py:test_load_drive_config_defaults_enabled_when_key_missing",
+      "kind": "test",
+      "text": "test test_load_drive_config_defaults_enabled_when_key_missing in tests/test_drive.py.",
+      "source_nodes": [
+        "test:tests/test_drive.py:test_load_drive_config_defaults_enabled_when_key_missing"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "test:tests/test_drive.py:test_load_drive_config_missing_file_uses_defaults",
+      "kind": "test",
+      "text": "test test_load_drive_config_missing_file_uses_defaults in tests/test_drive.py.",
+      "source_nodes": [
+        "test:tests/test_drive.py:test_load_drive_config_missing_file_uses_defaults"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    },
+    {
+      "id": "test:tests/test_drive.py:test_upload_csv_to_drive_does_not_trash_stale_folder",
+      "kind": "test",
+      "text": "test test_upload_csv_to_drive_does_not_trash_stale_folder in tests/test_drive.py.",
+      "source_nodes": [
+        "test:tests/test_drive.py:test_upload_csv_to_drive_does_not_trash_stale_folder"
+      ],
+      "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+      "summary_version": 1,
+      "metadata": {
+        "enriched": false
+      }
+    }
+  ]
+}

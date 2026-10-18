@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import io
 import logging
 import re
 from dataclasses import dataclass, field
@@ -534,6 +535,46 @@ def _sort_charges(df: pd.DataFrame) -> pd.DataFrame:
     )
     export_cols = [c for c in EXPORT_COLUMNS if c in sorted_df.columns]
     return sorted_df.reset_index(drop=True)[export_cols]
+
+
+def _read_export_csv(text: str) -> pd.DataFrame:
+    if not text or not text.strip():
+        return pd.DataFrame(columns=EXPORT_COLUMNS)
+    frame = pd.read_csv(io.StringIO(text), dtype=str, keep_default_na=False)
+    for column in EXPORT_COLUMNS:
+        if column not in frame.columns:
+            frame[column] = ""
+    return frame[EXPORT_COLUMNS]
+
+
+def merge_charge_csv_texts(local_text: str, remote_text: str | None) -> str:
+    """Union local and Drive rows. Drive-only rows and blank-local paid values stay."""
+    local = _read_export_csv(local_text)
+    if not remote_text or not remote_text.strip():
+        return local.to_csv(index=False)
+
+    remote = _read_export_csv(remote_text)
+    remote_by_key = {_export_row_key(row): row for _, row in remote.iterrows()}
+    local_keys: set[tuple[str, str, str]] = set()
+    rows: list[pd.Series] = []
+    for _, row in local.iterrows():
+        key = _export_row_key(row)
+        local_keys.add(key)
+        merged = row.copy()
+        remote_row = remote_by_key.get(key)
+        if remote_row is not None:
+            local_paid = str(merged.get(PAID_COLUMN, "")).strip()
+            remote_paid = str(remote_row.get(PAID_COLUMN, "")).strip()
+            if not local_paid and remote_paid:
+                merged[PAID_COLUMN] = remote_paid
+        rows.append(merged)
+    for key, row in remote_by_key.items():
+        if key not in local_keys:
+            rows.append(row)
+    if not rows:
+        return pd.DataFrame(columns=EXPORT_COLUMNS).to_csv(index=False)
+    merged_frame = _sort_charges(pd.DataFrame(rows)[EXPORT_COLUMNS])
+    return merged_frame.to_csv(index=False)
 
 
 def write_aggregated_csv(frames: list[pd.DataFrame], output_dir: Path) -> Path:

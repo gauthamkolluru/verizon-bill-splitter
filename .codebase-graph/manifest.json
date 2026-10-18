@@ -1,0 +1,11 @@
+{
+  "repository": "verizon-bill-splitter",
+  "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+  "generated_at": "2026-10-18T04:14:27Z",
+  "summary_version": 1,
+  "node_count": 212,
+  "edge_count": 438,
+  "community_algorithm": "leiden",
+  "community_count": 5,
+  "retrieval_token_budget_default": 8000
+}
