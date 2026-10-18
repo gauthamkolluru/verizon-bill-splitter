@@ -2,16 +2,17 @@
 
 ## What
 
-Parses Verizon wireless bill PDFs (manual download) and exports one aggregated CSV with bill metadata and per-line charges across all bills.
+Parses Verizon wireless bill PDFs (manual drop or Playwright download) and exports one aggregated CSV with bill metadata and per-line charges across all bills.
 
 ## Where
 
 | Path | Role |
 |------|------|
 | `parse_bill.py` | CLI entry point |
-| `verizon_bill_splitter/cli.py` | Argument parsing, batch/unparsed workflow |
+| `verizon_bill_splitter/cli.py` | Argument parsing, batch/unparsed workflow, `--fetch` / `--login` |
 | `verizon_bill_splitter/parser.py` | pdfplumber parsing, CSV export |
 | `verizon_bill_splitter/manifest.py` | Tracks parsed PDFs so reruns skip completed files |
+| `verizon_bill_splitter/verizon_fetch.py` | Playwright download + local browser session (`storage_state`) |
 | `verizon_bill_splitter/drive.py` | Google Drive folder creation and CSV upload |
 | `verizon_bill_splitter/logging_config.py` | Central logging setup |
 | `config/line_users.yaml.example` | Template for phone→user map |
@@ -20,6 +21,7 @@ Parses Verizon wireless bill PDFs (manual download) and exports one aggregated C
 | `config/google_drive.yaml` | Local Drive upload settings (gitignored) |
 | `config/google_credentials.json` | OAuth client JSON from Google Cloud (gitignored) |
 | `config/google_token.json` | Saved OAuth token after first consent (gitignored) |
+| `config/verizon_storage_state.json` | Playwright Verizon session (gitignored) |
 | `input/` | **Drop monthly bill PDFs here** (gitignored) |
 | `output/` | CSV exports + `.parsed_manifest.json` (gitignored) |
 | `tests/` | pytest unit tests |
@@ -28,9 +30,23 @@ Parses Verizon wireless bill PDFs (manual download) and exports one aggregated C
 
 ### Monthly workflow
 
+**Playwright (optional):**
+
+```bash
+source .venv/bin/activate
+# First time / expired session — headed browser, then press Enter
+python parse_bill.py --login
+# Each month: download into input/, then parse unparsed PDFs
+python parse_bill.py --fetch
+```
+
+Session file: `config/verizon_storage_state.json`. If Verizon changes the bills UI, edit `DOWNLOAD_SELECTORS` in `verizon_bill_splitter/verizon_fetch.py`.
+
+**Manual:**
+
 1. Open [Verizon bills page](https://www.verizon.com/digital/nsa/secure/ui/bill/docs/#/) and sign in.
 2. Download the bill PDF and save it to `input/`.
-3. Run (no arguments needed after the first setup):
+3. Run:
 
 ```bash
 source .venv/bin/activate
@@ -49,6 +65,12 @@ python parse_bill.py --status
 ```bash
 # Parse all unparsed PDFs in input/
 python parse_bill.py
+
+# Download latest bill via Playwright, then parse
+python parse_bill.py --fetch
+
+# Save / refresh Verizon browser session (headed login)
+python parse_bill.py --login
 
 # List parsed vs unparsed PDFs without parsing
 python parse_bill.py --status
@@ -107,6 +129,7 @@ If Verizon changes bill layout, edit `verizon_bill_splitter/parser.py`:
 ```bash
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
+playwright install chromium
 ```
 
-Stack: Python 3.12+, pdfplumber, pandas, openpyxl, pyyaml, google-api-python-client.
+Stack: Python 3.12+, pdfplumber, pandas, openpyxl, pyyaml, google-api-python-client, playwright.

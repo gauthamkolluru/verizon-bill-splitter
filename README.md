@@ -9,6 +9,7 @@ cd ~/Projects/verizon-bill-splitter
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
+playwright install chromium
 ```
 
 ## Configure users (optional)
@@ -28,6 +29,28 @@ lines:
 ```
 
 ## Monthly workflow
+
+### Option A — Playwright download (recommended)
+
+1. One-time (or when the session expires): sign in with a headed browser:
+
+```bash
+python parse_bill.py --login
+```
+
+Complete Verizon sign-in / MFA in the browser, then press Enter in the terminal. The session is saved to `config/verizon_storage_state.json` (gitignored).
+
+2. Each month:
+
+```bash
+python parse_bill.py --fetch
+```
+
+This downloads the latest bill PDF into `input/`, then parses any unparsed PDFs into `output/charges.csv` as usual. If the saved session expired, a headed browser opens again for manual login.
+
+If Verizon changes their bills UI, update the download selectors in `verizon_bill_splitter/verizon_fetch.py` (`DOWNLOAD_SELECTORS`).
+
+### Option B — Manual download
 
 1. **[Open Verizon bills](https://www.verizon.com/digital/nsa/secure/ui/bill/docs/#/)** — sign in and download your bill PDF.
 2. Save the PDF to **`input/`** (e.g. `input/MyBill_03.15.2026.pdf`).
@@ -89,4 +112,5 @@ See `CODEBASE_INDEX.md` for module map and commands.
 ## Notes
 
 - Bill PDFs stay in `input/` and are gitignored (they contain account info).
-- No Verizon login automation — download the PDF manually each month, then run the script.
+- `config/verizon_storage_state.json` is credential-equivalent — keep it local and gitignored.
+- Playwright download is optional; you can still drop PDFs into `input/` manually.

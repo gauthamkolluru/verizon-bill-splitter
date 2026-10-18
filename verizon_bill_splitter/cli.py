@@ -17,10 +17,15 @@ from verizon_bill_splitter.parser import (
     parse_bill_pdf,
     write_aggregated_csv,
 )
+from verizon_bill_splitter.verizon_fetch import (
+    VERIZON_BILLS_URL,
+    VerizonFetchError,
+    default_storage_state_path,
+    fetch_latest_bill,
+    login_and_save_session,
+)
 
 logger = logging.getLogger("verizon_bill_splitter.cli")
-
-VERIZON_BILLS_URL = "https://www.verizon.com/digital/nsa/secure/ui/bill/docs/#/"
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -59,6 +64,22 @@ def build_parser() -> argparse.ArgumentParser:
         "--force",
         action="store_true",
         help="Re-parse PDFs even if already processed; with no PDF args, re-parses all PDFs in --input-dir",
+    )
+    parser.add_argument(
+        "--fetch",
+        action="store_true",
+        help="Download the latest bill PDF via Playwright into --input-dir, then parse",
+    )
+    parser.add_argument(
+        "--login",
+        action="store_true",
+        help="Open a headed browser to sign in to Verizon and save the session, then exit",
+    )
+    parser.add_argument(
+        "--storage-state",
+        type=Path,
+        default=None,
+        help="Playwright storage state path (default: config/verizon_storage_state.json)",
     )
     parser.add_argument(
         "--drive-config",
@@ -169,11 +190,48 @@ def _maybe_upload_to_drive(args: argparse.Namespace) -> int:
     return 0
 
 
+def _storage_state_path(args: argparse.Namespace) -> Path:
+    return args.storage_state or default_storage_state_path()
+
+
+def _run_login(args: argparse.Namespace) -> int:
+    try:
+        path = login_and_save_session(_storage_state_path(args))
+    except VerizonFetchError as exc:
+        logger.error("%s", exc)
+        return 1
+    print(f"Saved Verizon session: {path}")
+    return 0
+
+
+def _run_fetch(args: argparse.Namespace) -> int:
+    try:
+        dest = fetch_latest_bill(
+            args.input_dir,
+            _storage_state_path(args),
+            force_login=False,
+        )
+    except VerizonFetchError as exc:
+        logger.error("%s", exc)
+        return 1
+    if dest is None:
+        logger.error("Fetch completed but no PDF path was returned")
+        return 1
+    print(f"Fetched bill: {dest}")
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     configure_logging()
     args = build_parser().parse_args(argv)
     if args.status:
         return _print_bill_status(args.input_dir, args.output_dir)
+    if args.login:
+        return _run_login(args)
+    if args.fetch:
+        fetch_code = _run_fetch(args)
+        if fetch_code != 0:
+            return fetch_code
     pdfs = _resolve_pdfs(args)
 
     if not pdfs:
