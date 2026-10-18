@@ -40,7 +40,7 @@ python parse_bill.py --login
 python parse_bill.py --fetch
 ```
 
-Session file: `config/verizon_storage_state.json`. If Verizon changes the bills UI, edit `DOWNLOAD_SELECTORS` in `verizon_bill_splitter/verizon_fetch.py`.
+Session file: `config/verizon_storage_state.json`. `--fetch` opens Documents & Receipts, selects Monthly Bills, and clicks the latest bill title. If Verizon changes the bills UI, edit `DOWNLOAD_SELECTORS` in `verizon_bill_splitter/verizon_fetch.py`.
 
 **Manual:**
 
@@ -84,8 +84,11 @@ python parse_bill.py --force input/MyBill_03.15.2026.pdf
 # Re-parse all PDFs in input/ and rebuild the aggregated CSV
 python parse_bill.py --force
 
-# Upload charges.csv to Google Drive (after setup; see below)
-python parse_bill.py --upload-drive
+# Parse, then update charges.csv on Google Drive (default)
+python parse_bill.py
+
+# Skip the Drive update for one run
+python parse_bill.py --no-drive
 
 # Tests
 pytest
@@ -96,10 +99,9 @@ pytest
 1. Copy `config/google_drive.yaml.example` to `config/google_drive.yaml`.
 2. In [Google Cloud Console](https://console.cloud.google.com/), create a project, enable **Google Drive API**, and create an **OAuth client ID** (Desktop app).
 3. Download the client JSON to `config/google_credentials.json`.
-4. Set `enabled: true` in `config/google_drive.yaml`.
-5. Run `python parse_bill.py --upload-drive` once; complete the browser consent flow.
+4. Run `python parse_bill.py` once; complete the browser consent flow.
 
-By default, files upload to `Verizon Bills` under My Drive (folder is created if missing). The same `charges.csv` is updated on each run when upload is enabled. Changing `folder_path` moves uploads to the new folder and removes a stale `Finance/Verizon Bills` tree when applicable. Use `--no-drive` to skip upload for a single run.
+Each run updates `charges.csv` in `Verizon Bills` under My Drive (the folder is created if missing). Rows that exist only on Drive stay, and a Drive `paid` value is kept when the local cell is blank. Use `--no-drive` to skip the update for a single run. Set `enabled: false` in `config/google_drive.yaml` to turn upload off.
 
 ### Output
 

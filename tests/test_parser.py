@@ -1,4 +1,5 @@
 from verizon_bill_splitter.parser import (
+    merge_charge_csv_texts,
     _extract_name,
     _is_account_wide,
     _parse_summary_coordinate_rows,
@@ -221,3 +222,27 @@ def test_merge_into_aggregated_csv_replaces_source(tmp_path):
     jan_rows = charges[charges["bill_date"] == "January 01, 2026"]
     assert len(jan_rows) == 1
     assert jan_rows.iloc[0]["amount"] == 99.0
+
+
+def test_merge_charge_csv_texts_keeps_drive_rows_and_paid():
+    header = "bill_date,billing_period,phone,device,charge_type,amount,bill_total,paid"
+    local = (
+        f"{header}\n"
+        '"October 08, 2026",p,555-111-2222,iPhone,Line,10,100,\n'
+    )
+    remote = (
+        f"{header}\n"
+        '"October 08, 2026",old,555-111-2222,Pixel,Line,9,90,yes\n'
+        '"September 08, 2026",p,555-111-2222,iPhone,Line,8,80,no\n'
+    )
+    merged = merge_charge_csv_texts(local, remote)
+    import pandas as pd
+
+    frame = pd.read_csv(__import__("io").StringIO(merged), dtype=str, keep_default_na=False)
+    october = frame[frame["bill_date"] == "October 08, 2026"].iloc[0]
+    september = frame[frame["bill_date"] == "September 08, 2026"]
+    assert october["amount"] == "10"
+    assert october["device"] == "iPhone"
+    assert october["paid"] == "yes"
+    assert len(september) == 1
+    assert september.iloc[0]["paid"] == "no"

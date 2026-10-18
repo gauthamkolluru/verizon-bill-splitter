@@ -46,7 +46,7 @@ Complete Verizon sign-in / MFA in the browser, then press Enter in the terminal.
 python parse_bill.py --fetch
 ```
 
-This downloads the latest bill PDF into `input/`, then parses any unparsed PDFs into `output/charges.csv` as usual. If the saved session expired, a headed browser opens again for manual login.
+This opens Documents & Receipts, selects Monthly Bills when that category is shown, and clicks the latest bill title. The PDF is saved into `input/`, then any unparsed PDFs are parsed into `output/charges.csv` as usual. If the saved session expired, a headed browser opens again for manual login.
 
 If Verizon changes their bills UI, update the download selectors in `verizon_bill_splitter/verizon_fetch.py` (`DOWNLOAD_SELECTORS`).
 
@@ -76,18 +76,17 @@ python parse_bill.py --force input/MyBill_03.15.2026.pdf
 python parse_bill.py --force
 ```
 
-### Google Drive (optional)
+### Google Drive
 
-Upload `output/charges.csv` to Google Drive after each run:
+Each parse updates `charges.csv` in Google Drive unless you pass `--no-drive`. The upload revises that one file: rows that exist only on Drive are kept, and a `paid` value already on Drive is kept when the local cell is blank.
 
 ```bash
 cp config/google_drive.yaml.example config/google_drive.yaml
 # Add OAuth client JSON as config/google_credentials.json (see CODEBASE_INDEX.md)
-# Set enabled: true in config/google_drive.yaml
-python parse_bill.py --upload-drive
+python parse_bill.py
 ```
 
-Default folder: `Verizon Bills` (created under My Drive if needed). Use `--no-drive` to skip upload for one run.
+Default folder: `Verizon Bills` (created under My Drive if needed). The first run opens a browser for consent.
 
 ## Output
 

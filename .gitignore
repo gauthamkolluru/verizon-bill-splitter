@@ -30,3 +30,6 @@ config/verizon_storage_state.json
 
 # Compact chat cache
 .cursor/compact/
+
+# Local structured chain-of-thought notes
+.cursor/scot/

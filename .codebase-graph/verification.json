@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "commit_sha": "cf38a41d429c0f5c8d5b97ce52b115d4190dec01",
+  "generated_at": "2026-10-18T04:14:27Z",
+  "working_tree": "dirty",
+  "dangling_edges": 0,
+  "missing_paths": [],
+  "uncovered_python_files": [],
+  "notes": [
+    "Structure, imports, and calls come from the Python ast module.",
+    "Incremental refresh for Drive CSV cutoff and missing-bill download."
+  ]
+}

@@ -7,6 +7,7 @@ from verizon_bill_splitter.drive import (
     DriveConfig,
     _escape_query_value,
     _folder_parts,
+    download_charges_csv,
     ensure_folder_path,
     load_drive_config,
     save_drive_config,
@@ -22,6 +23,23 @@ def test_escape_query_value():
 def test_folder_parts():
     assert _folder_parts("Finance/Verizon Bills") == ["Finance", "Verizon Bills"]
     assert _folder_parts("/Finance//Verizon/") == ["Finance", "Verizon"]
+
+
+def test_load_drive_config_defaults_enabled_when_key_missing(tmp_path: Path):
+    path = tmp_path / "google_drive.yaml"
+    path.write_text("folder_path: Verizon Bills\n")
+    config = load_drive_config(path)
+    assert config is not None
+    assert config.enabled is True
+    assert config.folder_path == "Verizon Bills"
+
+
+def test_load_drive_config_missing_file_uses_defaults(tmp_path: Path):
+    config = load_drive_config(tmp_path / "missing.yaml")
+    assert config is not None
+    assert config.enabled is True
+    assert config.credentials_file == Path("config/google_credentials.json")
+    assert config.folder_path == "Verizon Bills"
 
 
 def test_load_drive_config_disabled(tmp_path: Path):
@@ -97,6 +115,36 @@ def test_ensure_folder_path_creates_missing_folders():
     assert create_mock.execute.call_count == 1
 
 
+def test_download_charges_csv_reads_existing_file():
+    service = MagicMock()
+    service.files.return_value.list.return_value.execute.return_value = {
+        "files": [{"id": "file-1"}]
+    }
+
+    class _Downloader:
+        def __init__(self, buffer, request):
+            self.buffer = buffer
+            assert request == "media-request"
+
+        def next_chunk(self):
+            self.buffer.write(b"bill_date,amount\n03/15/2026,10\n")
+            return None, True
+
+    service.files.return_value.get_media.return_value = "media-request"
+    with patch("googleapiclient.http.MediaIoBaseDownload", _Downloader):
+        text = download_charges_csv(service, "folder-1")
+
+    assert text == "bill_date,amount\n03/15/2026,10\n"
+    service.files.return_value.get_media.assert_called_once_with(fileId="file-1")
+
+
+def test_download_charges_csv_missing_file():
+    service = MagicMock()
+    service.files.return_value.list.return_value.execute.return_value = {"files": []}
+    assert download_charges_csv(service, "folder-1") is None
+    service.files.return_value.get_media.assert_not_called()
+
+
 def test_upload_csv_updates_existing_file(tmp_path: Path):
     csv_path = tmp_path / "charges.csv"
     csv_path.write_text("bill_date,amount\n")
@@ -144,3 +192,26 @@ def test_upload_csv_to_drive_persists_folder_id(tmp_path: Path):
     assert reloaded is not None
     assert reloaded.folder_id == "resolved-folder"
     assert reloaded.folder_id_path == "Verizon Bills"
+
+
+def test_upload_csv_to_drive_does_not_trash_stale_folder(tmp_path: Path):
+    csv_path = tmp_path / "charges.csv"
+    csv_path.write_text("bill_date,amount\n")
+    config = DriveConfig(
+        enabled=True,
+        credentials_file=tmp_path / "creds.json",
+        token_file=tmp_path / "token.json",
+        folder_path="Verizon Bills",
+        folder_id="old-folder",
+        folder_id_path="Finance/Verizon Bills",
+    )
+    service = MagicMock()
+    with (
+        patch("verizon_bill_splitter.drive.get_drive_service", return_value=service),
+        patch("verizon_bill_splitter.drive.ensure_folder_path", return_value="new-folder"),
+        patch("verizon_bill_splitter.drive.upload_csv", return_value="file-1"),
+        patch("verizon_bill_splitter.drive._remove_stale_drive_folders") as trash_mock,
+    ):
+        upload_csv_to_drive(csv_path, config)
+
+    trash_mock.assert_not_called()

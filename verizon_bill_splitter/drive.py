@@ -24,9 +24,18 @@ class DriveConfig:
     folder_id_path: str | None = None
 
 
+def default_drive_config() -> DriveConfig:
+    return DriveConfig(
+        enabled=True,
+        credentials_file=Path("config/google_credentials.json"),
+        token_file=Path("config/google_token.json"),
+        folder_path="Verizon Bills",
+    )
+
+
 def load_drive_config(path: Path | None) -> DriveConfig | None:
     if path is None or not path.exists():
-        return None
+        return default_drive_config()
     try:
         raw = yaml.safe_load(path.read_text()) or {}
     except (OSError, yaml.YAMLError) as exc:
@@ -35,7 +44,7 @@ def load_drive_config(path: Path | None) -> DriveConfig | None:
     if not isinstance(raw, dict):
         logger.warning("Drive config %s must be a mapping", path)
         return None
-    if not raw.get("enabled", False):
+    if not raw.get("enabled", True):
         return None
 
     credentials_file = Path(raw.get("credentials_file", "config/google_credentials.json"))
@@ -184,6 +193,46 @@ def _find_file(service: Any, name: str, parent_id: str) -> str | None:
     return files[0]["id"] if files else None
 
 
+def download_charges_csv(
+    service: Any,
+    folder_id: str,
+    name: str = "charges.csv",
+) -> str | None:
+    """Return the text of charges.csv in folder_id, or None when it is absent."""
+    file_id = _find_file(service, name, folder_id)
+    if not file_id:
+        logger.info("No %s in Drive folder %s", name, folder_id)
+        return None
+
+    import io
+
+    from googleapiclient.http import MediaIoBaseDownload
+
+    request = service.files().get_media(fileId=file_id)
+    buffer = io.BytesIO()
+    downloader = MediaIoBaseDownload(buffer, request)
+    done = False
+    while not done:
+        _, done = downloader.next_chunk()
+    logger.info("Downloaded %s from Google Drive (id=%s)", name, file_id)
+    return buffer.getvalue().decode("utf-8-sig")
+
+
+def download_charges_csv_text(
+    config: DriveConfig,
+    config_path: Path | None = None,
+) -> str | None:
+    """Download charges.csv using the saved Drive config. Does not upload."""
+    service = get_drive_service(config)
+    folder_id = ensure_folder_path(service, config.folder_path, _cached_folder_id(config))
+    if folder_id != config.folder_id or config.folder_id_path != config.folder_path:
+        config.folder_id = folder_id
+        config.folder_id_path = config.folder_path
+        if config_path is not None:
+            save_drive_config(config_path, config)
+    return download_charges_csv(service, folder_id)
+
+
 def upload_csv(service: Any, folder_id: str, local_path: Path) -> str:
     from googleapiclient.http import MediaFileUpload
 
@@ -246,12 +295,7 @@ def upload_csv_to_drive(
     config_path: Path | None = None,
 ) -> str:
     service = get_drive_service(config)
-    stale_folder_id = (
-        config.folder_id if config.folder_id and _cached_folder_id(config) is None else None
-    )
     folder_id = ensure_folder_path(service, config.folder_path, _cached_folder_id(config))
-    if stale_folder_id and stale_folder_id != folder_id:
-        _remove_stale_drive_folders(service, stale_folder_id)
 
     if folder_id != config.folder_id or config.folder_id_path != config.folder_path:
         config.folder_id = folder_id
